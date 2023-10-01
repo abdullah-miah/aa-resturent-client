@@ -12,6 +12,7 @@ function Banner() {
   return (
     <Carousel
     autoPlay={true}
+    
     >
     <div>
         <img src={img1} />
