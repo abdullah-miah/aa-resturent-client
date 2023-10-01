@@ -10,7 +10,9 @@ import img6 from "../../../assets/home/06.png";
 
 function Banner() {
   return (
-    <Carousel>
+    <Carousel
+    autoPlay={true}
+    >
     <div>
         <img src={img1} />
         
