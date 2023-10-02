@@ -2,6 +2,7 @@ import BistroBoss from "../../../components/BistroBoss";
 import CallUs from "../../../components/CallUs";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
+import CheffRecomends from "../CheffRecomends/CheffRecomends";
 import Featured from "../Featured/Featured";
 import PopularMenu from "../PopularMenu/PopularMenu";
 import Testimonials from "../Testimonials/Testimonials";
@@ -15,6 +16,7 @@ function Home() {
         <BistroBoss></BistroBoss>
         <PopularMenu></PopularMenu>
         <CallUs></CallUs>
+        <CheffRecomends></CheffRecomends>
         <Featured></Featured>
         <Testimonials></Testimonials>
     </div>
