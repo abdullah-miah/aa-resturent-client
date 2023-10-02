@@ -12,7 +12,7 @@ function Banner() {
   return (
     <Carousel
     autoPlay={true}
-    
+    infiniteLoop={true}
     >
     <div>
         <img src={img1} />
