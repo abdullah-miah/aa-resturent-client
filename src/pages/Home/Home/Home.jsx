@@ -1,3 +1,4 @@
+import BistroBoss from "../../../components/BistroBoss";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Featured from "../Featured/Featured";
@@ -10,6 +11,7 @@ function Home() {
     <div>
         <Banner></Banner>
         <Category></Category>
+        <BistroBoss></BistroBoss>
         <PopularMenu></PopularMenu>
         <Featured></Featured>
         <Testimonials></Testimonials>

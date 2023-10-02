@@ -39,4 +39,4 @@ function PopularMenu() {
   )
 }
 
-export default PopularMenu
+export default PopularMenu;
