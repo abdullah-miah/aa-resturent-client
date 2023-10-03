@@ -8,7 +8,7 @@ function CheffRecomends() {
         subHeading="Should Try"
         heading={'cheff recomends'}
         ></SectionTitle>
-        <div className="md:grid grid-cols-3 gap-2 ml-4">
+        <div className="grid grid-cols-3 gap-2 ml-4">
         <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img className="w-full h-80" src={salads} alt="Shoes" /></figure>
   <div className="card-body text-center">
