@@ -11,8 +11,8 @@ export default function Navbar() {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><Link to='/'>Home</Link></li>
-        <li><Link to='menu'>Our Menu</Link></li>
-        <li><Link to= 'order'>Order Food</Link></li>
+        <li><Link to='/menu'>Our Menu</Link></li>
+        <li><Link to= '/order/salad'>Order Food</Link></li>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl">aA Resturent</a>
@@ -20,8 +20,8 @@ export default function Navbar() {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <li><Link to='/'>Home</Link></li>
-    <li><Link to='menu'>Our Menu</Link></li>
-    <li><Link to= 'order'>Order Food</Link></li>
+    <li><Link to='/menu'>Our Menu</Link></li>
+    <li><Link to= '/order/salad'>Order Food</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
