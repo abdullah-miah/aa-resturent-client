@@ -14,7 +14,7 @@ function AuthProvider({children}) {
 
     const signIn = (email, password)=>{
         setLoading(true);
-        return signInWithEmailAndPassword(email, password)
+        return signInWithEmailAndPassword(auth,email, password)
     };
 
     const logOut = ()=>{
@@ -27,7 +27,9 @@ function AuthProvider({children}) {
             console.log('current user', currentUser);
             setLoading(false)
         });
-        return unsubcribe();
+        return ()=>{
+            return unsubcribe();
+        }
     },[])
 
     const authInfo ={

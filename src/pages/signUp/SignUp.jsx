@@ -19,7 +19,7 @@ function SignUp() {
     createUser(data.email, data.password)
     .then(result=>{
       const loggedUser = result.user;
-      console.log(loggedUser)
+      console.log(loggedUser);
     })
   }
   return (
@@ -89,7 +89,7 @@ function SignUp() {
         </div>
       </form>
       <label className="label mx-auto mb-4">
-            <p>Login Here? <Link className="text-blue-500 hover:underline" to='/login'> Login</Link></p>
+            <p>Already have an account? <Link className="text-blue-500 hover:underline" to='/login'> Login</Link></p>
           </label>
     </div>
   </div>
