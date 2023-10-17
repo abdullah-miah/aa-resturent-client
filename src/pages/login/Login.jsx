@@ -12,7 +12,7 @@ function Login() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const from = location.state?.from?.pathName || '/';
+    const from = location.state?.from?.pathName || "/";
 
     useEffect(()=>{
         loadCaptchaEnginge(6); 
@@ -22,7 +22,7 @@ function Login() {
         const form =event.target;
         const email= form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+    
         signIn(email, password)
         .then(result=>{
             const user= result.user;
@@ -109,7 +109,7 @@ function Login() {
             </div>
             <div className="form-control mt-6">
              
-              <input disabled={disabled} className="btn btn-primary" type="submit" value="Login"></input>
+              <input disabled={false} className="btn btn-primary" type="submit" value="Login"></input>
             </div>
           </form>
           <p className='flex justify-center items-center mb-2'><small>New Here? <Link className='text-blue-500 text-sm hover:underline' to= "/signup">Crate an account</Link></small></p>
