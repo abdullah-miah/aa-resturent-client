@@ -2,6 +2,8 @@ import { NavLink, Outlet } from "react-router-dom";
 
 
 import { FaCalendarAlt, FaHome, FaShoppingCart, FaWallet } from 'react-icons/fa';
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { BiFoodMenu } from "react-icons/bi";
 import useCart from "../hooks/useCart";
 
 function Dashboard() {
@@ -24,13 +26,18 @@ function Dashboard() {
         <li> <NavLink to='/dashboard/home'><FaHome></FaHome> User Home</NavLink></li>
         <li> <NavLink to='/dashboard/mycart'>
              <FaShoppingCart/>My cart 
-             <span  className="badge badge-secondary">{cart?.length || 0}</span>
+             <span  className="badge badge-secondary"> + {cart?.length || 0}</span>
              </NavLink>
              
              </li>
         <div className="divider"></div>
         <li><NavLink to= '/'><FaHome/>Home</NavLink></li>
-        <li><NavLink to='/menu'> Menu</NavLink></li>
+        <li><NavLink to='/menu'>
+             <AiOutlineMenuUnfold/>
+             Menu</NavLink></li>
+        <li><NavLink to= '/order/salad'> <BiFoodMenu/>Order Food
+          
+        </NavLink></li>
        
       </ul>
     

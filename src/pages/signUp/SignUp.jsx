@@ -1,11 +1,14 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 
 function SignUp() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -15,12 +18,36 @@ function SignUp() {
   const {createUser}=useContext(AuthContext);
   const onSubmit = (data) => {
     
-    console.log(data)
+    
     createUser(data.email, data.password)
     .then(result=>{
       const loggedUser = result.user;
       console.log(loggedUser);
+      const saveUser = {name: data.name, email: data.email}
+      fetch('http://localhost:5000/users',{
+        method: "POST",
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(saveUser)
+      })
+      .then(res=>res.json())
+      .then(data =>{
+        if(data.insertedId){
+          Swal.fire({
+            title: 'SignUp Successfully',
+            showClass: {
+              popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+              popup: 'animate__animated animate__fadeOutUp'
+            }
+          })
+           navigate('/')
+        }
+      })
     })
+    
   }
   return (
     <>
@@ -91,6 +118,7 @@ function SignUp() {
       <label className="label mx-auto mb-4">
             <p>Already have an account? <Link className="text-blue-500 hover:underline" to='/login'> Login</Link></p>
           </label>
+          <SocialLogin></SocialLogin>
     </div>
   </div>
 </div>
