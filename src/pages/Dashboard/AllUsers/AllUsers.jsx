@@ -4,6 +4,7 @@ import { FaTrashAlt, FaUsersCog } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 function AllUsers() {
+  // const token = localStorage.getItem('access-token')
   const {data: users=[], refetch}= useQuery(['users'], async()=>{
     const res = await fetch('http://localhost:5000/users')
     return res.json();

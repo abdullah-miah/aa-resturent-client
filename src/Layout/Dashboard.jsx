@@ -10,6 +10,8 @@ function Dashboard() {
     const [cart]=useCart();
     //TODO : load fata from database when admin login
     const isAdmin = true;
+
+    // const [isAdmin]= 
   return (
     <div className="drawer lg:drawer-open ">
     <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
