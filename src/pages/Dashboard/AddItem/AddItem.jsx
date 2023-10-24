@@ -36,7 +36,7 @@ function AddItem() {
             recipe,
             image: imgURL,
           };
-          console.log(newItem);
+          // console.log(newItem);
           axiosSecure.post("/menu", newItem).then((data) => {
             if (data.data.insertedId) {
               reset();
