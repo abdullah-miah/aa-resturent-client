@@ -1,4 +1,4 @@
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaEdit } from "react-icons/fa";
 import SectionTitle from "../../../components/SectionTitle";
 import useMenu from "../../../hooks/useMenu";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
@@ -82,7 +82,7 @@ function ManageItems() {
                 <td className="uppercase">{item.category}</td>
                 <td className="text-right">${item.price}</td>
                 <td>
-                  <button className="btn btn-ghost btn-xs">details</button>
+                  <button className="btn btn-ghost bg-orange-400 text-white text-right"> <FaEdit></FaEdit> </button>
                 </td>
                 <td>
                   <button
