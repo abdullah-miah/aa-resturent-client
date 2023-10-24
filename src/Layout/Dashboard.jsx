@@ -29,7 +29,7 @@ function Dashboard() {
         {
           isAdmin ? <> <li> <NavLink to='/dashboard/history'><FaHome/> Admin Home</NavLink></li>
           <li> <NavLink to='/dashboard/addItem'><FaUtensils/>Add an Items</NavLink></li>
-          <li> <NavLink to='/dashboard/'><FaHome></FaHome> Manage Items</NavLink></li>
+          <li> <NavLink to='/dashboard/manageitems'><FaHome></FaHome> Manage Items</NavLink></li>
           <li> <NavLink to='/dashboard/home'><FaBook/> Manage Bookings</NavLink></li>
           <li> <NavLink to='/dashboard/allusers'><FaUsers/> All Users</NavLink></li>
           </> :<> 
