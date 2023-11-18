@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaShoppingCart } from 'react-icons/fa';
 import useCart from "../../../hooks/useCart";
+import useAdmin from "../../../hooks/useAdmin";
 
 export default function Navbar() {
   const {user,logOut}= useContext(AuthContext);
+  const [isAdmin]=useAdmin();
   const [cart]=useCart()
 
   const handleLogOut =()=>{
@@ -30,7 +32,10 @@ export default function Navbar() {
       <ul tabIndex={0} className="menu menu-sm  dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><Link to='/'>Home</Link></li>
         <li><Link to='/menu'>Our Menu</Link></li>
-        <li><Link to='/secret'>Secret</Link></li>
+        {
+      isAdmin ? <li><Link to= '/dashboard/adminhome' >Dashboard </Link> </li> :
+      <li><Link to= '/dashboard/userhome' >Dashboard </Link> </li>
+       }
         <li><Link to= '/order/salad'>Order Food</Link></li>
         <li>
       <Link to='/dashboard/mycart'>
@@ -57,7 +62,10 @@ export default function Navbar() {
     <ul className="menu menu-horizontal px-1">
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/menu'>Our Menu</Link></li>
-    <li><Link to='/secret'>Secret</Link></li>
+    {
+      isAdmin ? <li><Link to= '/dashboard/adminhome' >Dashboard </Link> </li> :
+      <li><Link to= '/dashboard/userhome' >Dashboard </Link> </li>
+    }
     <li>
       <Link to='/dashboard/mycart'>
       <button className="btn">
