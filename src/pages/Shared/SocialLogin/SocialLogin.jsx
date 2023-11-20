@@ -17,7 +17,7 @@ function SocialLogin() {
             const loggedInUser = result.user;
             console.log(loggedInUser);
             const saveUser = {name: loggedInUser.displayName, email: loggedInUser.email}
-            fetch('http://localhost:5000/users',{
+            fetch('https://aa-resturent-server.vercel.app/users',{
               method: "POST",
               headers: {
                 'content-type': 'application/json'
@@ -47,7 +47,7 @@ function SocialLogin() {
     <div>
         <div className="divider"></div>
         <div className="w-full text-center my-4">
-        <button onClick={handleGoogleSingnIn} className="btn btn-circle btn-outline">
+        <button onClick={handleGoogleSingnIn} className="btn btn-circle btn-primary">
       <FaGoogle/>
      </button>
         </div>

@@ -3,6 +3,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
+import { FaShoppingCart } from "react-icons/fa";
 
 function FoodCart({item}) {
     const {name,image,price,recipe,_id}=item;
@@ -14,7 +15,7 @@ function FoodCart({item}) {
          console.log(item)
          if(user && user.email){
             const cartItem = {menuItemId:_id, name, image, price, email:user.email}
-            fetch('http://localhost:5000/carts',{
+            fetch('https://aa-resturent-server.vercel.app/carts',{
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -58,7 +59,7 @@ function FoodCart({item}) {
         <h2 className="card-title ">{name}</h2>
         <p>{recipe}</p>
         <div className="card-actions justify-end">
-        <button onClick={()=>handleAddToCart(item)} className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-4 border-orange-400 ">Add To Cart</button>
+        <button onClick={()=>handleAddToCart(item)} className="btn btn-outline bg-slate-100 border-0 border-b-4 mt-4 border-orange-400 "> <FaShoppingCart/> Add To Cart</button>
         </div>
     </div>
     </div>

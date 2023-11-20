@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react"
+
 import SectionTitle from "../../../components/SectionTitle"
 import MenuItem from "../../Shared/MenuItem/MenuItem";
 import useMenu from "../../../hooks/useMenu";
+import { Link } from "react-router-dom";
 
 
 function PopularMenu() {
@@ -27,7 +28,7 @@ function PopularMenu() {
             }
         </div>
         <div className="flex justify-center items-center mt-4 ">
-        <button className="btn btn-outline border-0 border-b-4 mt-4">View Full Menue</button>
+        <Link to='/menu'><button className="btn btn-outline border-0 border-b-4 mt-4">View Full Menue</button></Link>
         </div>
     </section>
   )

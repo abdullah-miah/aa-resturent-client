@@ -14,7 +14,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate(); // Assuming you're using react-router-dom
 
   const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'https://aa-resturent-server.vercel.app',
   });
   
 

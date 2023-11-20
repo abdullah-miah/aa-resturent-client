@@ -24,7 +24,7 @@ function SignUp() {
       const loggedUser = result.user;
       console.log(loggedUser);
       const saveUser = {name: data.name, email: data.email}
-      fetch('http://localhost:5000/users',{
+      fetch('https://aa-resturent-server.vercel.app/users',{
         method: "POST",
         headers: {
           'content-type': 'application/json'
@@ -66,12 +66,12 @@ function SignUp() {
           <label className="label">
             <span className="label-text">Full Name</span>
           </label>
-          <input
+          <input 
           type="text" 
           name="name"
           {...register("name",{ required: true })}
            placeholder="Full Name"
-            className="input input-bordered" 
+            className="input input-bordered w-4/6" 
              />
             {errors.name && <span className="text-red-400">Name is field is required</span>}
         </div>
@@ -83,7 +83,7 @@ function SignUp() {
            name="email"
            {...register("email", {required:true})}
             placeholder="Email"
-             className="input input-bordered" 
+             className="input input-bordered w-4/6" 
              />
                {errors.email && <span className="text-red-400">Email is field is required</span>}
         </div>
@@ -99,7 +99,7 @@ function SignUp() {
              pattern: /^[A-Za-z]+$/i
             })}
           placeholder="Password" 
-          className="input input-bordered"
+          className="input input-bordered w-4/6"
            />
             {errors.password?.type === "required" && (
         <p className="text-red-600">Password is required</p>
@@ -111,12 +111,12 @@ function SignUp() {
         <p className="text-red-600">Password less then 20 charcters</p>
       )}
         </div>
-        <div className="form-control mt-6">
-          <input className="btn btn-primary" type="submit" value="SignUp"></input>
+        <div className="form-control mt-6 w-4/6">
+          <input className="btn btn-primary " type="submit" value="SignUp"></input>
         </div>
       </form>
       <label className="label mx-auto mb-4">
-            <p>Already have an account? <Link className="text-blue-500 hover:underline" to='/login'> Login</Link></p>
+            <p>Already have an account? <Link className="text-blue-500  hover:underline" to='/login'> Login</Link></p>
           </label>
           <SocialLogin></SocialLogin>
     </div>
