@@ -73,7 +73,7 @@ function Login() {
               <input
                 type="email"
                 placeholder="Email Adress"
-                className="input input-bordered"
+                className="input input-bordered w-80"
                 name="email"
               />
             </div>
@@ -85,7 +85,7 @@ function Login() {
                 type="password"
                 placeholder="Password"
                 name="password"
-                className="input input-bordered"
+                className="input input-bordered w-80"
               />
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
@@ -103,13 +103,13 @@ function Login() {
                 type="text"
                 placeholder="type the captcha"
                 name="captcha"
-                className="input input-bordered"
+                className="input input-bordered w-80"
               />
             </div>
             <div className="form-control mt-6">
               <input
                 disabled={false}
-                className="btn btn-primary"
+                className="btn btn-primary w-80"
                 type="submit"
                 value="Login"
               ></input>
